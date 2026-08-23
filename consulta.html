@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultar Agendamento — Liverpool Barbearia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Playball&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#121417", "ink-deep": "#0e0e0e", cream: "#f5f0e6", gold: "#d4a373" },
+          fontFamily: { serif: ["Playfair Display", "serif"], script: ["Playball", "cursive"], sans: ["Inter", "system-ui", "sans-serif"] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body { background: #121417; font-family: "Inter", system-ui, sans-serif; overflow-x: hidden; }
+  </style>
+
+  <!-- Same Supabase project as index.html — keep both in sync. -->
+  <script>
+    window.__SUPABASE_CONFIG__ = {
+      url: "https://oucdftjzepjrnqwlgwdy.supabase.co",
+      anonKey: "sb_publishable_DlKuMZVO0JgV52uVg4M2-A_z0hW0Xpr",
+    };
+  </script>
+
+  <!-- No import map: every module imports its CDN dependencies directly by
+       full esm.sh URL (see src/*.js) — avoids import maps entirely, since
+       some mobile WebViews (e.g. Spck Editor's built-in preview) don't
+       support them. -->
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main-consulta.js"></script>
+</body>
+</html>

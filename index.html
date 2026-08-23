@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Liverpool Barbearia — Onde o estilo encontra a precisão. Agende seu horário em Recife, PE." />
+  <title>Liverpool Barbearia</title>
+
+  <!-- Preload the fonts that carry the whole visual identity -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Playball&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind Play CDN build — no bundler/build step required -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#121417",
+            "ink-deep": "#0e0e0e",
+            cream: "#f5f0e6",
+            gold: "#d4a373",
+          },
+          fontFamily: {
+            serif: ["Playfair Display", "serif"],
+            script: ["Playball", "cursive"],
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { background: #121417; overflow-x: hidden; }
+    body {
+      background: #121417;
+      font-family: "Inter", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: #d4a373; color: #121417; }
+    /* keyboard-focus visibility, kept even though most interactive elements
+       also get Tailwind's default ring on :focus-visible */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 2px solid #d4a373;
+      outline-offset: 2px;
+    }
+  </style>
+
+  <!-- Supabase project config — anon key only, safe to expose client-side.
+       Replace with your project's own URL/anon key before deploying. -->
+  <script>
+    window.__SUPABASE_CONFIG__ = {
+      url: "https://oucdftjzepjrnqwlgwdy.supabase.co",
+      anonKey: "sb_publishable_DlKuMZVO0JgV52uVg4M2-A_z0hW0Xpr",
+    };
+  </script>
+
+  <!-- No import map: every module imports its CDN dependencies (React, GSAP,
+       Supabase, htm) directly by full esm.sh URL, all pinned to the exact
+       same version string, so the browser's module cache dedupes them by
+       URL on its own. This avoids import maps entirely, since some mobile
+       WebViews (e.g. Spck Editor's built-in preview) don't support them. -->
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
